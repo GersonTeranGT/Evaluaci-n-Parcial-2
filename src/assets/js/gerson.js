@@ -11,7 +11,7 @@ let calcularPromedio = () => {
     for (let i = 0; i < estudiantes.length; i++) {
         suma += estudiantes[i].nota;
     }
-    const promedio = suma / estudiantes.length;
+    let promedio = suma / estudiantes.length;
     return promedio.toFixed(2);
 };
 
