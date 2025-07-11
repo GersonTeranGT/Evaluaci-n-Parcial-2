@@ -24,6 +24,61 @@
 <body>
 
 
+    <!--Barra navegacion-->
+    <div class="menu-navegacion" id="menu-navegacion">
+        <ul>
+            <li><a href="#" class="activo">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Servicios</a></li>
+        </ul>
+    </div>
+
+    <nav class="barra-navegacion">
+      <div class="contenedor-navegacion">
+
+        <a href="#" class="marca">
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.croma.com.ec%2Fclientes%2F&psig=AOvVaw3Dqj2_QYJD-0zjOSzk0EIp&ust=1752271253917000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjN8KGls44DFQAAAAAdAAAAABAE" alt="Tu Logo Aqui" />
+          <span>Itsqmet</span>
+        </a>
+
+        <div class="buscador-navegacion">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          <input type="text" placeholder="Buscar...">
+        </div>
+
+        <button class="alternador-menu-movil" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacion" aria-controls="menu-navegacion" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="menu-navegacion-escritorio">
+            <ul>
+                <li><a href="#" class="activo">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+            </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+
+    <script>
+        // Script para el funcionamiento del menu movil
+        document.addEventListener('DOMContentLoaded', function() {
+            const alternadorMenu = document.querySelector('.alternador-menu-movil');
+            const menuNavegacionMovil = document.getElementById('menu-navegacion');
+
+            alternadorMenu.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+                this.setAttribute('aria-expanded', !isExpanded);
+                menuNavegacionMovil.classList.toggle('visible');
+            });
+        });
+    </script>
+
 
 
     <section id="formulario">
@@ -88,6 +143,8 @@
         </div>
     </footer>
     <script src="src/assets/js/gerson.js"></script>
+        <script src="src/assets/js/anthony.js"></script>
+
 </body>
 
 </html>
